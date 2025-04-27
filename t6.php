@@ -35,7 +35,30 @@
      }
     }
     ?>
-    
+
+<?php
+    echo "<table>";
+    echo "<tr><th>bilangan</th>";
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<th>$i</th>";
+    }
+    echo "</tr>";
+
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<tr>";
+        echo "<th>$i</th>"; 
+        for ($j = 1; $j <= 10; $j++) {
+            $hasil = $i * $j;
+         if ($hasil % 2 == 0) {
+            echo "<td class='genap'>$hasil</td>";
+         } else {
+            echo "<td class='ganjil'>$hasil</td>";
+         }
+        }
+    echo "</tr>";
+}
+echo "</table>";
+?>
 
 </body>
 </html>
